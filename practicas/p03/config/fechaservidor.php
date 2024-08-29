@@ -1,3 +1,3 @@
-<?php
-echo date(DATE_ATOM);
+<?php 
+    echo date(DATE_ATOM)
 ?>

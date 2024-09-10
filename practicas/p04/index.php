@@ -119,7 +119,25 @@ echo 'Variable $z= ';
 print_r($z);
 ?>
 
+<h2>Ejercicio 4</h2>
+<h4>
+Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
+la matriz $GLOBALS o del modificador global de PHP.
+</h4>
+<?php
 
+
+function MVariables() {
+    global $a, $z, $b;
+    echo 'Variable $a= : '.$a.'<br>';
+    echo 'Variable $b=: '.$b.'<br>';
+    
+    echo 'Variable $z= : ';
+    print_r($z);
+}
+MVariables();
+unset($a,$b,$z);
+?>
 
 
 </body>

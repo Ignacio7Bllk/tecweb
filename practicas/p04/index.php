@@ -74,6 +74,53 @@ afecta a $b porque $b se asigna por referencia a $a. Entonces, $b ahora muestra
 unset($a,$b,$c);
 ?>
 
+<h2>
+    Ejercicio 3
+</h2>
+<h4>Muestra el contenido de cada variable inmediatamente después de cada asignación,
+verificar la evolución del tipo de estas variables (imprime todos los componentes de los
+arreglo)</h4>
+
+<?php
+echo'$a = “PHP5”;<br>';
+$a="PHP5 ";
+echo'Variable $a= '.$a.'<br><br>';
+
+
+echo'$z[]=&$a;<br>';
+$z[]=&$a;
+echo 'Variable $z= ';
+print_r($z);
+echo'<br><br>';
+
+echo'$b = “5a version de PHP ”;<br>';
+$b = "5a version de PHP";
+echo 'Variable $b= '.$b.'<br><br>';
+
+
+echo'$c = $b*10;<br>';
+$x = intval($b);  
+$c = $x * 10;
+echo 'Variavle $c= ';
+print_r($c);
+echo '<br><br>';
+
+echo'$a .= $b; <br>';
+$a .= $b;
+echo'variable $a= '.$a.'<br><br>';
+/*
+echo'$b *= $c;<br>';
+$b *= $c;
+*/
+
+echo '$z[0] = "MySQL"<br>';
+$z[0] = "MySQL";
+echo 'Variable $z= ';
+print_r($z);
+?>
+
+
+
 
 </body>
 </html>

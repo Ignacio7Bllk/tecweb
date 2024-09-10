@@ -30,5 +30,50 @@
         echo '<li>$house*5 es inválida porque el símbolo * no está permitido.</li>';
         echo '</ul>';
     ?>
+
+    
+    <h2>Ejercicio 2</h2>
+    <h4>Proporcionar los valores de $a, $b, $c como sigue:</h4>
+    <p>$a = “ManejadorSQL”;<br>
+        $b = 'MySQL’;<br>
+        $c = &$a;</p>
+
+    
+        <?php
+        $a = "ManejadorSQL";
+        $b = 'MySQL';
+        $c =&$a;
+
+
+echo'<h4>a. Ahora muestra el contenido de cada variable</h4>';
+
+
+echo'varible $a= '.$a .'<br>';
+echo 'Variable $b= '.$b.'<br>';
+echo 'variable $c= '.$c.'<br>';
+
+
+echo'<h4>b. Agrega al código actual las siguientes asignaciones:</h4>';
+echo'<p>$a = “PHP server”; <br> $b = &$a;</p>';
+
+$a= "PHP server";
+$b=&$a;
+
+echo'<h4>c. Vuelve a mostrar el contenido de cada uno</h4>';
+echo'Variable $a= '.$a.'<br>';
+echo 'variable $b= '.$b.'<br>';
+echo 'variable$c= '.$c.'<br>';
+
+//Descripcion
+echo'<h4>d. Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de
+asignaciones</h4>';
+
+echo'$a se cambia a "PHP server". Esto actualiza el valor de $a y también
+afecta a $b porque $b se asigna por referencia a $a. Entonces, $b ahora muestra
+"PHP server" junto con $c que tambien mustra "PHP server" .';
+unset($a,$b,$c);
+?>
+
+
 </body>
 </html>

@@ -139,6 +139,25 @@ MVariables();
 unset($a,$b,$z);
 ?>
 
+<h2>Ejercicio 5</h2>
+<h4>Dar el valor de las variables $a, $b, $c al final del siguiente script:</h4>
+<p>$a = “7 personas”;<br>
+$b = (integer) $a;<br>
+$a = “9E3”;<br>
+$c = (double) $a;</p>
+
+<?php
+$a = "7 personas";
+$b = (integer) $a;
+$a = "9E3";
+$c = (double) $a;
+
+echo'Variable $a= '.$a.'<br>';
+echo'Variable $b= '.$b.'<br>';
+echo'Variable $a= '.$a.'<br>';
+echo'Variable $c= '.$c.'<br>';
+?>
+
 
 </body>
 </html>

@@ -97,21 +97,20 @@ echo'$b = “5a version de PHP ”;<br>';
 $b = "5a version de PHP";
 echo 'Variable $b= '.$b.'<br><br>';
 
-
+settype($b,"integer");
 echo'$c = $b*10;<br>';
-$x = intval($b);  
-$c = $x * 10;
-echo 'Variavle $c= ';
-print_r($c);
-echo '<br><br>';
+$c = $b*10;
+echo'variable $c= '.$c.'<br><br>';
+
 
 echo'$a .= $b; <br>';
 $a .= $b;
 echo'variable $a= '.$a.'<br><br>';
-/*
+
 echo'$b *= $c;<br>';
 $b *= $c;
-*/
+echo'Variable $b= '.$b.'<br><br>';
+
 
 echo '$z[0] = "MySQL"<br>';
 $z[0] = "MySQL";

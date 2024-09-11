@@ -203,6 +203,38 @@ echo 'Valor de $e= '.print_r($e).'<br>';
 
 ?>
 
+<h2>Ejercicio 7</h2>
+<?php
+        // 1 
+        echo '<h3>a. La versión de Apache y PHP:</h3>';
+        echo '<p>Usando la variable $_SERVER se puede determinar la versión de PHP y Apache con la siguiente sintaxis:<br>';
+        echo '$_SERVER["SERVER_SOFTWARE"]<br>';
+        echo '$_SERVER["PHP_VERSION"]</p>';
+        echo '<p>Versiones</p>';
+        echo '<ul>';
+        echo '<li>La versión de Apache es: '.$_SERVER["SERVER_SOFTWARE"].'</li>';
+        echo '<li>La versión de PHP es: '.phpversion().'</li>';
+        echo '</ul>';
+
+        // 2
+        echo '<h3>b. El nombre del sistema operativo (servidor):</h3>';
+        echo '<p>Usando la variable $_SERVER se puede determinar el nombre del sistema operativo con la siguiente sintaxis:<br>';
+        echo 'php_uname("s")</p>';
+        echo '<p>Nombre</p>';
+        echo '<ul>';
+        echo '<li>El nombre del sistema operativo es: '.php_uname("s").'</li>';
+        echo '</ul>';
+
+        // 3
+        echo '<h3>c. El idioma del navegador (cliente):</h3>'; 
+        echo '<p>Usando la variable $_SERVER se puede determinar el idioma del navegador del cliente con la siguiente sintaxis:<br>';
+        echo '$_SERVER["HTTP_ACCEPT_LANGUAGE"]</p>';
+        echo '<p>Idioma:</p>';
+        echo '<ul>';
+        echo '<li>El idioma del navegador del cliente es: '.$_SERVER["HTTP_ACCEPT_LANGUAGE"].'</li>';
+        echo '</ul>';
+        ?>
+
 
 </body>
 </html>

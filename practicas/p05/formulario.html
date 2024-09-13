@@ -16,14 +16,18 @@
 
     <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#174;?<br><br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puedes ser uno de los diez afortunados ganadores.</p>
 
-    <p>Información del Participante</p>
 
+    <h2>Información del Participante</h2>
+<form action="http://localhost/mike/concurso.php" method="post">
     <ul>
-    <li>Nombre:</li>
-    <li>Dirección de E-mail:</li>
-    <li>Número Telefónico:</li>
-    <li>Mis tenis son tan feos porque...</li>
+    <li>Nombre:<input type="text" name="name"></li>
+    <li>Dirección de E-mail: <input type="email" name="email"></li>
+    <li>Número Telefónico: <input type="tel" name="phone"></li>
+    <li> Mis tenis son tan feos porque...<br>
+        <textarea name="Story" rows="4" cols="60" maxlength="300"
+        placeholder="No mas de 300 caracteres."></textarea></li>
     </ul>
+
 
     <h2>Diseña tus Mike personalizados:</h2>
 
@@ -48,5 +52,9 @@
     <p>Talla</p>
     <p>Las medidas reflejan el estándar masculino:</p>
 
+    
+    <p><input type="submit">
+        <input type="reset"></p>
+</form>
     </body>
 </html>

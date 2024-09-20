@@ -35,3 +35,34 @@ function GenMatriz() {
     echo "<h3>$numGen números generados en $iteracion iteraciones.</h3>";
 }
 ?>
+
+<?php
+
+function CWile($nm){
+    if (is_numeric($nm)) {
+        $numero_gen = rand(1, 999); // Genera un número aleatorio
+
+        // Si la variable $nm es un número, el bucle buscará un múltiplo de $nm
+        while($numero_gen % $nm != 0){
+            $numero_gen = rand(1, 999); // Generar otro número aleatorio si no es múltiplo
+        }
+
+        // Retornar el número múltiplo encontrado
+        return "Se encontró un múltiplo de $nm: <strong>$numero_gen</strong>";
+    } 
+}
+
+function DoWile($nm){
+    if (is_numeric($nm)) {
+        $numero_gen = 0; // Inicializamos la variable
+
+        // El bucle do-while generará números hasta encontrar un múltiplo de $nm
+        do {
+            $numero_gen = rand(1, 999); // Genera un número aleatorio
+        } while($numero_gen % $nm != 0);
+
+        // Retornar el número múltiplo encontrado
+        return "Se encontró un múltiplo de $nm: <strong>$numero_gen</strong>";
+    } 
+}
+?>

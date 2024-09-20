@@ -37,5 +37,32 @@ if (isset($_POST['generar'])) {
 }
 ?>
 
+
+
+<h1>Ejercicio 3</h1>
+<p>Utiliza un ciclo while para encontrar el primer número entero obtenido aleatoriamente,
+pero que además sea múltiplo de un número dado.</p>
+
+<ul>
+    <li>Crear una variante de este script utilizando el ciclo do-while.</li>
+    <li>El número dado se debe obtener vía GET.</li>
+</ul>
+
+<form method="GET">
+    Ingrese el número: <input type="number" name="numero_ing">
+    <input type="submit" value="Enviar">
+</form>
+<?php
+if (isset($_GET['numero_ing'])) {
+    $ni = (int)$_GET['numero_ing'];
+
+    $mensaje = CWile($ni);
+    echo "<p>$mensaje</p>";
+
+    $mensaje2=DoWile($ni);
+    echo "<p>$mensaje2</p>";
+}
+?>
+
 </body>
 </html>

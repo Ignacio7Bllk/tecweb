@@ -22,5 +22,20 @@
     }
 ?>
 
+
+<h1>Ejercicio 2</h1>
+
+<p>Crea un programa para la generación repetitiva de 3 números aleatorios hasta obtener una
+secuencia compuesta por: <b>impar</b>, <b>par</b>, <b>impar</b>.</p>
+
+<form method="POST">
+<input type="submit" name="generar" value="Generar" >
+</form>
+<?php
+if (isset($_POST['generar'])) {
+    GenMatriz();
+}
+?>
+
 </body>
 </html>

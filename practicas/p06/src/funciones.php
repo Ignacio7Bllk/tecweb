@@ -13,3 +13,25 @@ if(is_numeric($num)){
 }
 }
 ?>
+
+<?php
+function GenMatriz() {
+    $matriz = [];
+    $iteracion = 0;
+
+    do {
+        $iteracion++;
+        $fila = [rand(1, 999), rand(1, 999), rand(1, 999)];
+
+        $matriz[] = $fila;
+    } while (!($fila[0] % 2 != 0 && $fila[1] % 2 == 0 && $fila[2] % 2 != 0));
+
+    echo "<h2>Solución:</h2>";
+    foreach ($matriz as $fila) {
+        echo implode(", ", $fila) . "<br>";
+    }
+    
+    $numGen = $iteracion * 3;
+    echo "<h3>$numGen números generados en $iteracion iteraciones.</h3>";
+}
+?>

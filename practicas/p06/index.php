@@ -64,5 +64,26 @@ if (isset($_GET['numero_ing'])) {
 }
 ?>
 
+
+
+<h1>Ejercicio 4</h1>
+<p>Crear un arreglo cuyos índices van de 97 a 122 y cuyos valores son las letras de la ‘a’
+a la ‘z’. Usa la función chr(n) que devuelve el caracter cuyo código ASCII es n para poner
+el valor en cada índice. Es decir:</p>
+<p>[97] => a</p>
+<p>[98] => b</p>
+<p>[99] => c</p>
+<p>...</p>
+<p>[122] => z</p>
+<ul>
+    <li>Crea el arreglo con un ciclo for</li>
+    <li>Lee el arreglo y crea una tabla en XHTML con echo y un ciclo foreach</li>
+</ul>
+<p>foreach ($arreglo as $key => $value) {<br>&nbsp # code...<br>}</p>
+<?php
+Arreglo();
+?>
+
+
 </body>
 </html>

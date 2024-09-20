@@ -66,3 +66,24 @@ function DoWile($nm){
     } 
 }
 ?>
+
+
+<?php
+function Arreglo(){
+    echo "<h4>Codigo ASCII</h4>";
+    $arre= array();
+    for($i=97; $i<=122;$i++){
+        $arre[$i]=chr($i);
+    }
+
+    echo "<ul>";
+
+    foreach($arre as $num => $let) {
+        // Imprimimos cada número y letra como elementos de la lista
+        echo "<li>[$num] => $let</li>";
+    }
+    
+    // Cerramos la lista no ordenada
+    echo "</ul>";
+}
+?>

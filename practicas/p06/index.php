@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 6</title>
 </head>
+<?php
+include 'src/funciones.php';
+?>
 <body>
 
 <h1>Ejercicio 1</h1>

@@ -62,7 +62,7 @@
 						<td><?= $row['precio'] ?></td>
 						<td><?= $row['unidades'] ?></td>
 						<td><?= utf8_encode($row['detalles']) ?></td>
-						<td><img src=<?= $row['imagen'] ?> ></td>
+						<td><img src="<?= $row['imagen'] ?>" style="width: 200px; height: auto;"></td>
 					</tr>
 				</tbody>
 			</table>

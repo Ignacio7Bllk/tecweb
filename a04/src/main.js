@@ -161,3 +161,139 @@ function ejercicio9(){
             break;
     }
 }
+
+function ejercicio10(){
+    var x;
+    x=50;
+    var resultado="";
+    var div1 = document.getElementById("ejercicio10");
+    while(x<=100){
+        resultado="<p>"+resultado+x+"<br></p>";
+        x=x+1;
+    }
+    div1.innerHTML=resultado;
+}
+
+function ejercicio11(){
+    var x = 1;
+    var suma = 0;
+    var valor;
+    while (x <= 5) {
+        valor = prompt("Ingresar el valor: ");
+        valor = parseInt(valor);
+        suma = suma + valor;
+        x = x + 1;
+    }
+    var div1 = document.getElementById("ejercicio11");
+    div1.innerHTML = "<p>La suma de los valores es " + suma + "<br></p>";
+}
+
+function ejercicio12(){
+    var valor;
+    var div1 = document.getElementById("ejercicio12"); 
+    var resultado = ""; 
+    do {
+        valor = prompt("Ingresa un valor entre 0 y 999:");
+        valor = parseInt(valor);
+        if (valor === 0) break;
+        resultado += "<p>El valor " + valor + " tiene ";
+        if (valor < 10) {
+            resultado += "1 dígito";
+        } else if (valor < 100) {
+            resultado += "2 dígitos";
+        } else {
+            resultado += "3 dígitos";
+        }
+        resultado += "</p>"; 
+    } while (valor != 0);
+    div1.innerHTML = resultado;
+}
+
+function ejercicio13(){
+    var f;
+    var resultado='';
+    var div1 = document.getElementById('ejercicio13');
+    div1.innerHTML='<p>';
+    for(f=1;f<=20;f++){
+        resultado=resultado+f+' ';
+    }
+    div1.innerHTML+=resultado+'</p>';
+}
+
+/************************************** */
+function ejercicio14(){
+    var div1 =document.getElementById('ejercicio14');
+    div1.innerHTML='<p>Cuidado<br>Ingresa tu documento correctamente</p>';
+    div1.innerHTML+='<p>Cuidado<br>Ingresa tu documento correctamente</p>';
+    div1.innerHTML+='<p>Cuidado<br>Ingresa tu documento correctamente</p>';
+}
+
+function ejercicio15(){
+    function mostrarMensaje(){
+        var div1 =document.getElementById('ejercicio15');
+        div1.innerHTML+='<p>Cuidado<br>Ingresa2 tu documento correctamente</p>';
+    }
+    mostrarMensaje();
+    mostrarMensaje();
+    mostrarMensaje();
+}
+
+function ejercicio16(){
+    var div1 =document.getElementById('ejercicio16');
+    var resultado='';
+    function mostrarRango(x1,x2){
+        var inicio;
+        for(inicio=x1;inicio<=x2;inicio++){
+            resultado+=inicio+' ';
+        }
+    }
+    var valor1,valor2;
+    valor1=prompt('Ingresar el valor inferior: ','');
+    valor1=parseInt(valor1);
+    valor2=prompt('Ingresar el valor superior: ','');
+    valor2=parseInt(valor2);
+    mostrarRango(valor1,valor2);
+    div1.innerHTML='<p>'+resultado+'</p>';
+}
+
+function ejercicio17(){
+    function convertirCastellano(x){
+        if(x==1){
+            return "uno";
+        }else if(x==2){
+            return "dos";
+        }else if(x==3){
+            return "tres";
+        }else if(x==4){
+            return "cuatro";
+        }else if(x==5){
+            return "cinco";
+        }else{
+            return "valor incorrecto";
+        }
+    }
+    var valor;
+    valor=prompt('Ingresa un valor entre 1 y 5','');
+    var r=convertirCastellano(valor);
+    var div1=document.getElementById('ejercicio17');
+    div1.innerHTML='<p>'+r+'</p>';
+}
+
+function ejercicio18(){
+    function convertirCastellano(x){
+        switch(x){
+            case 1:return "uno";
+            case 2:return "dos";
+            case 3:return "tres";
+            case 4:return "cuatro";
+            case 5:return "cinco";
+            default: return "valor incorrecto";
+        }
+    }
+    var valor;
+    valor=prompt('Ingresa un valor entre 1 y 5','');
+    valor=parseInt(valor);
+    var r=convertirCastellano(valor);
+    var div1=document.getElementById('ejercicio18');
+    div1.innerHTML='<p>'+r+'</p>';
+}

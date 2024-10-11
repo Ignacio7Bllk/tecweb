@@ -92,9 +92,18 @@ if (isset($_GET['id'])) {
             font-size: 1em;
         }
 
+        select{
+          width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
         input[type="submit"],
-        input[type="reset"] {
-            background-color: #007bff;
+        input[type="button"] {
+            background-color: blue;
             color: #ffffff;
             border: none;
             border-radius: 4px;
@@ -147,12 +156,12 @@ if (isset($_GET['id'])) {
     }
 
     if (imagen.trim() === "") {
-      document.getElementById("form-imagen").value = "img.png";
+      document.getElementById("form-imagen").value = "img/img.png";
     }
 
     /* Validar que el precio sea un número y mayor a 99.99 */
     precio = parseFloat(precio);
-    if (isNaN(precio) || precio < 99.99) {
+    if (isNaN(precio) || precio < 99.99 || precio==="") {
       alert("El campo precio debe ser un número mayor o igual a 99.99");
       return false;
     }
@@ -166,22 +175,23 @@ if (isset($_GET['id'])) {
 
     return true;
   }
-
   window.onload = function() {
-    var form = document.getElementById("formularioTenis");
-    form.onsubmit = function(event) {
-      if (!validarFormulario()) {
-        event.preventDefault(); // Evita que se envíe el formulario si la validación falla
-      }
-    };
+  var form = document.getElementById("formularioTenis");
+  form.onsubmit = function(event) {
+    if (!validarFormulario()) {
+      event.preventDefault(); // Evita que se envíe el formulario si la validación falla
+      console.log("El formulario no pasó la validación y no se envía.");
+    }
   };
+};
+
 </script>
 
 
   </head>
   <body>
-    <h1>Registro de producto&ldquo;Chidos&rdquo;</h1>
-    <p>Por favor rellene los campos</p>
+    <h1>Modificar los productos&ldquo;Chidos&rdquo;</h1>
+    <p>Por favor modifique si es necesario</p>
     <form  id="formularioTenis" method="post" action="http://localhost:8089/Desktop/tecweb/practicas/p09/update_producto.php">
 
       <!--</form> action="http://localhost:8089/Pruebas/p08/P8_1/set_producto_v2.php">-->
@@ -192,7 +202,21 @@ if (isset($_GET['id'])) {
         <input type="hidden" name="id" value="<?= !empty($producto['id']) ? htmlspecialchars($producto['id']) : '' ?>">
 
           <li><label for="form-name">Nombre:</label> <input type="text" name="nombre" id="form-nombre" value="<?= !empty($producto['nombre']) ? htmlspecialchars($producto['nombre']) : '' ?>" ></li>
-          <li><label for="form-marca">Marca:</label> <input type="text" name="marca" id="form-marca" value="<?= !empty($producto['marca'])? htmlspecialchars($producto['marca']): ''?>" ></li>
+          <label for="form-marca">Marca:</label>
+    <select name="marca" id="form-marca">
+        <option value="Asus" <?= (!empty($producto['marca']) && $producto['marca'] === 'Asus') ? 'selected' : '' ?>>Asus</option>
+        <option value="Dell" <?= (!empty($producto['marca']) && $producto['marca'] === 'Hell') ? 'selected' : '' ?>>Dell</option>
+        <option value="Hp" <?= (!empty($producto['marca']) && $producto['marca'] === 'Hp') ? 'selected' : '' ?>>HP</option>
+        <option value="Lenovo" <?= (!empty($producto['marca']) && $producto['marca'] === 'Lenovo') ? 'selected' : '' ?>>Lenovo</option>
+        <option value="Samsung" <?= (!empty($producto['marca']) && $producto['marca'] === 'Samsung') ? 'selected' : '' ?>>Samsung</option>
+        <option value="Sony" <?= (!empty($producto['marca']) && $producto['marca'] === 'Sony') ? 'selected' : '' ?>>Sony</option>
+        <option value="Machenika" <?= (!empty($producto['marca']) && $producto['marca'] === 'Machenika') ? 'selected' : '' ?>>Machenike</option>
+        <option value="MSI" <?= (!empty($producto['marca']) && $producto['marca'] === 'Msi') ? 'selected' : '' ?>>MSI</option>
+        <option value="Acer" <?= (!empty($producto['marca']) && $producto['marca'] === 'Acer') ? 'selected' : '' ?>>Acer</option>
+        <option value="Apple" <?= (!empty($producto['marca']) && $producto['marca'] === 'Apple') ? 'selected' : '' ?>>Apple</option>
+        <option value="Huawei" <?= (!empty($producto['marca']) && $producto['marca'] === 'Huawei') ? 'selected' : '' ?>>Huawei</option>
+        <option value="Xiaomi" <?= (!empty($producto['marca']) && $producto['marca'] === 'Xiaomi') ? 'selected' : '' ?>>Xiaomi</option>
+    </select>
           <li><label for="form-tel">Modelo:</label> <input type="text" name="modelo" id="form-modelo" value="<?= !empty($producto['modelo'])? htmlspecialchars($producto['modelo']): ''?>"></li>
           <li><label for="form-marca">Precio:</label> <input type="text" name="precio" id="form-precio" value="<?= !empty($producto['precio'])? htmlspecialchars($producto['precio']): ''?>"></li>
           <li><label for="form-story">Detalle:</label><br><textarea name="detalles" rows="4" cols="60" id="form-detalles" placeholder="No más de 250 caracteres de longitud"><?= !empty($producto['detalles']) ? htmlspecialchars($producto['detalles']) : '' ?></textarea></li> 
@@ -203,7 +227,8 @@ if (isset($_GET['id'])) {
       </fieldset>
       <p>
         <input type="submit" value="Registrar producto">
-        <input type="reset">
+        <input type="button" value="Regresar" onclick="history.back();">
+        
       </p>
 
     </form>

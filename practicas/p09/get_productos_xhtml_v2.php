@@ -51,6 +51,7 @@ if (isset($_GET['tope']))
 					<th scope="col">Unidades</th>
 					<th scope="col">Detalles</th>
 					<th scope="col">Imagen</th>
+                    <th scope="col">modificar</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -64,6 +65,10 @@ if (isset($_GET['tope']))
 						<td><?= $row['unidades'] ?></td>
 						<td><?= utf8_encode($row['detalles']) ?></td>
 						<td><img src="<?= $row['imagen'] ?>" style="width: 200px; height: auto;"></td>
+                        <td><a href="http://localhost:8089/Desktop/tecweb/practicas/p09/formulario_productos_v2.php?id=<?= $row['id'] ?>">modificar</a></td>
+
+                        
+
 					</tr>
 					<?php endforeach; ?>
 				</tbody>

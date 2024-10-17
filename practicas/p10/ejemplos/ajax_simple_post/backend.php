@@ -2,6 +2,8 @@
     $user = 'sin nombre de usuario';
     $pass = 'sin password';
 
+    
+
     if( isset($_POST['usuario']) ) {
         $user = 'Usuario recibido: '.$_POST['usuario'];
     }

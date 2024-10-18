@@ -10,8 +10,6 @@ var baseJSON = {
 
 //FUNCION VALIDAR DATOS
 
-
-
 function validarProducto(e){
 
     var productoJsonString = document.getElementById('description').value;
@@ -19,11 +17,23 @@ function validarProducto(e){
     finalJSON['nombre'] = document.getElementById('name').value;
 
     // Validaciones
-    if (finalJSON.nombre === '' && finalJSON.marca==''&& finalJSON.modelo =="" ) {
-        alert('¡Debes Rellenar los campos faltantes!');
+    if (finalJSON.nombre === '' ) {
+        alert('¡Debes llenar el campo Nombre!');
         event.preventDefault();
         return;
-    } 
+    } else if (finalJSON.marca === '') {
+        alert('¡Debes llenar el campo Marca!');
+        event.preventDefault();
+        return;
+    } else if (finalJSON.modelo === '') {
+        alert('¡Debes llenar el campo Modelo!');
+        event.preventDefault();
+        return;
+    } else if (isNaN(finalJSON.precio)) {
+        alert('¡Debes llenar el campo Precio correctamente!');
+        event.preventDefault();
+        return;
+    }
     // Validaciones adicionales
     if (finalJSON.nombre.length > 100) {
         alert('¡El campo nombre tiene más de 100 caracteres!');
@@ -81,8 +91,6 @@ function agregarProducto(e){
 
 }
 
-
-
 // FUNCIÓN CALLBACK DE BOTÓN "Buscar"
 function buscarID(e) {
     /**
@@ -124,7 +132,7 @@ function buscarID(e) {
                         <tr>
                             <td>${productos.id}</td>
                             <td>${productos.nombre}</td>
-                            <td><ul>${descripcion}</ul></td>
+                            <td><ul>${precio}</ul></td>
                         </tr>
                     `;
 
@@ -206,7 +214,7 @@ function buscarProducto(e) {
                         <td>${producto.modelo}</td>
                         <td>${producto.marca}</td>
                         <td>${producto.detalles}</td>
-                        <td><img src="${producto.imagen}" alt="Imagen del producto" /></td>
+                        <td><img src="${producto.imagen}" alt="Imagen del producto" style="width: 100px; height: auto;"/></td>
                     </tr>
                     `;
                     contProductos.innerHTML += plantilla;

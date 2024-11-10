@@ -6,6 +6,41 @@
     <!-- BOOTSTRAP 4  -->
     
     <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    <style>
+      /* Estilos de validación de estado */
+.red {
+    background-color: #ff4c4c; /* Fondo rojo para estado inválido */
+    height: 8px;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.yellow {
+    background-color: #ffcc00; /* Fondo amarillo para advertencia */
+    height: 8px;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.green {
+    background-color: #4caf50; /* Fondo verde para estado válido */
+    height: 8px;
+    width: 100%;
+    margin-top: -10px;
+}
+
+/* Ocultar elemento en caso de estar inactivo */
+.d-none {
+    display: none !important;
+}
+
+/* Mensajes de validación */
+small {
+    color: #f0ad4e; /* Color de texto para advertencias */
+    font-style: italic;
+}
+
+    </style>
   </head>
   <body onload="init()">
 

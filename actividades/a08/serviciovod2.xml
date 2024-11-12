@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CatalogoVOD>
+    <cuenta correo="ignacio@example.com">
+        <perfiles>
+            <perfil usuario="ignacio" idioma="Español"/>
+            <perfil usuario="Carlos" idioma="Inglés"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Acción">
+                <titulo nombre="Jonh Wick" duracion="120 min"/>
+                <titulo nombre="Jonh Wick" duracion="120 min"/>
+                <titulo nombre="Rapidos y Furioso" duracion="110 min"/>
+                <titulo nombre="Shazam" duracion="95 min"/>
+            </genero>
+            <genero nombre="Terror">
+                <titulo nombre="Viernes 13" duracion="100 min"/>
+                <titulo nombre="Terrifier" duracion="90 min"/>
+                <titulo nombre="Halloween" duracion="90 min"/>
+                <titulo nombre="Exorcista" duracion="90 min"/>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Drama">
+                <titulo nombre="Historias Cruzadas" duracion="45 min"/>
+                <titulo nombre="The Crown" duracion="50 min"/>
+                <titulo nombre="El Pingüino" duracion="40 min"/>
+                <titulo nombre="Game of Thrones" duracion="55 min"/>
+            </genero>
+            <genero nombre="Documental">
+                <titulo nombre="Vida" duracion="60 min"/>
+                <titulo nombre="Animales Salvajes" duracion="70 min"/>
+                <titulo nombre="ASTROS" duracion="65 min"/>
+                <titulo nombre="LOS GIGANTES" duracion="75 min"/>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CatalogoVOD>
+    <cuenta>
+        <correo>ignacio@example.com</correo>
+        <perfiles>
+            <perfil>
+                <usuario>ignacio</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+            <perfil>
+                <usuario>Carlos</usuario>
+                <idioma>Inglés</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>Acción</nombre>
+                <titulo>
+                    <nombre>Jonh Wick</nombre>
+                    <duracion>120 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Jonh Wick</nombre>
+                    <duracion>120 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Rapidos y Furioso</nombre>
+                    <duracion>110 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Shazam</nombre>
+                    <duracion>95 min</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Terro</nombre>
+                <titulo>
+                    <nombre>Viernes 13</nombre>
+                    <duracion>100 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Terrifier</nombre>
+                    <duracion>90 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Hallowen</nombre>
+                    <duracion>90 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Exorcista</nombre>
+                    <duracion>90 min</duracion>
+                </titulo>
+
+            </genero>
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>Drama</nombre>
+                <titulo>
+                    <nombre>Historias Cruzadas</nombre>
+                    <duracion>45 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>The crown</nombre>
+                    <duracion>50 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>El pinguino</nombre>
+                    <duracion>40 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Game of Throne</nombre>
+                    <duracion>55 min</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Documental</nombre>
+                <titulo>
+                    <nombre>Vida</nombre>
+                    <duracion>60 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Animales salvajes</nombre>
+                    <duracion>70 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>ASTROS</nombre>
+                    <duracion>65 min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>LOS GIGANTES</nombre>
+                    <duracion>75 min</duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>
